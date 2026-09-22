@@ -1,0 +1,209 @@
+/* Variables y estilos generales */
+:root {
+    --color-primario: #ff7b00;
+    --color-secundario: #333333;
+    --color-fondo: #f9f9fc;
+    --color-texto: #444444;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+}
+
+/* Navegación (Ajustada para móvil) */
+nav ul {
+    list-style-type: none;
+    background-color: var(--color-secundario);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #4a4a4a;
+    transition: background-color 0.3s;
+}
+
+nav ul li:last-child a {
+    border-bottom: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-primario);
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.imagen-destacada {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.boton-enlace {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Tema Integrado: CSS Grid para Cuidados */
+.grid-cuidados {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta-contenido {
+    padding: 1.5rem;
+}
+
+.tarjeta-contenido h2 {
+    color: var(--color-primario);
+    margin-top: 0;
+}
+
+/* Formulario */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+form div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e66a00;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #e5e5e5;
+    margin-top: 3rem;
+    color: #666;
+}
+
+/* Diseño adaptable a escritorio */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; 
+        justify-content: center;
+    }
+    
+    nav ul li a {
+        border-bottom: none;
+        padding: 1rem 2rem;
+    }
+
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .texto-hero {
+        flex: 1;
+    }
+    
+    .imagen-destacada {
+        flex: 1;
+    }
+
+    .grid-cuidados {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
